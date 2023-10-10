@@ -2,9 +2,11 @@ import React from 'react';
 
 const App = () => {
     return (
-        <div>
-           this is app
-        </div>
+        <>
+            <div>
+            this is app
+            </div>
+        </>
     );
 };
 
