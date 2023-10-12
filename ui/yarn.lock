@@ -3493,14 +3493,6 @@ internal-slot@^1.0.4, internal-slot@^1.0.5:
     has "^1.0.3"
     side-channel "^1.0.4"
 
-"iress-ui-lib@file:../design-system/iress-ui-lib-v1.0.0.tgz":
-  version "1.0.0"
-  resolved "file:../design-system/iress-ui-lib-v1.0.0.tgz#e449850dc8fc7d97811a2ee8e8310dc6b7957f5e"
-  dependencies:
-    react "^18.2.0"
-    react-dom "^18.2.0"
-    styled-components "^5.3.11"
-
 is-arguments@^1.0.4, is-arguments@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/is-arguments/-/is-arguments-1.1.1.tgz#15b3f88fda01f2a97fec84ca761a560f123efa9b"

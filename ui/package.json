@@ -15,7 +15,6 @@
     "test": "export TS_JEST_DISABLE_VER_CHECKER=true && jest --runInBand"
   },
   "dependencies": {
-    "iress-ui-lib": "/Users/xiaoyuhan/projects/iress/iress/design-system/iress-ui-lib-v1.0.0.tgz",
     "antd": "^5.7.3",
     "axios": "^1.4.0",
     "core-js": "^3.30.2",

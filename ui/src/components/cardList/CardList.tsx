@@ -1,7 +1,7 @@
 import React from 'react';
-import Card from './Card';
+import Card from '../card/Card';
 import { CardListWrapper } from './CardList.styles';
-import { CardProps } from './Card'
+import { CardProps } from '../card/Card'
 
 export interface CardListProps {
     isLink?: boolean;

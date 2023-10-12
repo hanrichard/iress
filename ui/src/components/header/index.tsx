@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { InputWrapper, HeaderWrapper, LogoWrapper, SearchWrapper } from './index.styles';
+import { HeaderWrapper, LogoWrapper } from './index.styles';
+import IressLink from '../IressLink/IressLink'
+import IressInput from '../IressInput/IressInput';
 
 const Header = () => {
     const [value, setValue] = useState('')
@@ -9,9 +11,8 @@ const Header = () => {
             <Link to='/'>IDMb</Link>
         </LogoWrapper>
 
-        <InputWrapper><input placeholder='Search IMDb' value={value} onChange={(e) => setValue(e.target.value)} /></InputWrapper>
-        <SearchWrapper><Link to={'/searchResult?key=' + value}>Search</Link></SearchWrapper>
-
+        <IressInput placeholder='Search IMDb' value={value} onChange={(e) => setValue(e.target.value)} />
+        <IressLink name='Search' url={'/searchResult?key=' + value} />
     </HeaderWrapper>
 };
 
