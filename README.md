@@ -1,4 +1,8 @@
 Iress code test
+
+aws hosting link: http://iresstest.s3-website-ap-southeast-2.amazonaws.com/
+aws server link: https://77xmk0xq36.execute-api.ap-southeast-2.amazonaws.com/dev/api/movies
+
 It has 2 parts:
 
 ## ui - frontend
