@@ -1,1 +1,1 @@
-// placeholder
+declare module "iress-ui-lib"

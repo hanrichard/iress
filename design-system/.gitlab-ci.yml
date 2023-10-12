@@ -1,0 +1,72 @@
+stages:
+  - build
+  - publish
+  - test
+  - pages
+
+build:
+  stage: build
+  image: node:18-slim
+  script:
+    - echo $CI_PROJECT_ID
+    - cd common/ui-library
+    - yarn install
+    - yarn build
+  artifacts:
+    paths:
+      - packages/**/*
+      - node_modules
+
+pages:
+  image: node:18-slim
+  stage: build
+  rules:
+    - if: ($CI_COMMIT_BRANCH != "main" || $CI_PIPELINE_SOURCE == "merge_request_event")
+      when: manual
+      allow_failure: false
+    - when: on_success
+  artifacts:
+    paths:
+      - public
+  script:
+    - cd common/ui-library
+    - echo $CI_PROJECT_DIR
+    - export PATH=$(pwd):$PATH
+    - echo @nsw-department-of-customer-service:registry=https://gitlab.com/api/v4/projects/$CI_PROJECT_ID/packages/npm/ >> .npmrc
+    - yarn install
+    - yarn build-storybook
+    - cd ..
+    - cd ..
+    - rm -rf "public/storybook"
+    - mkdir -p "public/storybook";
+    - mv common/ui-library/storybook-static/* "public/storybook"
+
+test:
+  stage: test
+  image: node:18-slim
+  script:
+    - echo $CI_PROJECT_ID
+    - cd common/ui-library
+    - yarn install
+    - yarn test
+  dependencies:
+    - build
+
+publish:
+  stage: publish
+  image: node:18-slim
+  rules:
+    - if: $CI_COMMIT_TAG || $CI_COMMIT_BRANCH != 'main'
+      when: never
+    - when: manual
+      allow_failure: true
+  script:
+    - cd common/ui-library
+    - npm config set -- '//gitlab.com/api/v4/projects/$CI_PROJECT_ID/packages/npm/:_authToken' "${COMMON_UI_LIB_TOKEN}"
+    - echo "//gitlab.com/api/v4/projects/$CI_PROJECT_ID/packages/npm/:_authToken=$COMMON_UI_LIB_TOKEN" > ~/.npmrc
+    - echo "always-auth=true" >> ~/.npmrc
+    - yarn install
+    - yarn build
+    - npm publish
+  dependencies:
+    - build
