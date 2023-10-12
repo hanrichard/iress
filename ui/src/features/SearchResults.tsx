@@ -13,7 +13,7 @@ const SearchResult = () => {
         return i?.name?.toLocaleLowerCase().includes(key?.toLocaleLowerCase() || '');
     });
 
-    const displayMovies = () => <CardList data={items} isLink />;
+    const displayMovies = () => <CardList data={items} withLink />;
 
     return items.length !== 0 ? displayMovies() : <>No result</>;
 };

@@ -6,21 +6,21 @@ export interface CardProps {
     id: string;
     name: string;
     thumbnail: string;
-    isLink?: boolean;
+    withLink?: boolean;
     rating: number;
 }
 
-const Card = ({ id, name, thumbnail, rating, isLink }: CardProps) => {
+const Card = ({ id, name, thumbnail, rating, withLink }: CardProps) => {
     return (
         <CardWrapper key={id}>
-            {isLink ? (
+            {withLink ? (
                 <Link to={'/movie/' + id}>
                     <img src={thumbnail} />
                 </Link>
             ) : (
                     <img src={thumbnail} />
                 )}
-            <NameWrapper>{isLink ? <Link to={'/movie/' + id}>{name}</Link> : name}</NameWrapper>
+            <NameWrapper>{withLink ? <Link to={'/movie/' + id}>{name}</Link> : name}</NameWrapper>
             <div>{rating}</div>
         </CardWrapper>
     );
