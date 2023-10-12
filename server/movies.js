@@ -1,15 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const fs = require("fs");
+const movies = require("./db.json");
 
 router.get("/api/movies", (req, res) => {
-	fs.readFile("./db.json", (err, json) => {
-		let obj = JSON.parse(json);
-		res.setHeader("Content-type", "application/json");
-
-		res.status(200).json({
-			movies: obj,
-		});
+	res.setHeader("Content-type", "application/json");
+	res.status(200).json({
+		movies: movies,
 	});
 });
 
