@@ -21,18 +21,3 @@ export const HeaderWrapper = styled.div`
     margin-bottom: 50px;
 `
 
-export const InputWrapper = styled.div`
-    input {
-        border-radius: 5px;
-        width: 300px;
-        height: 20px;
-    }
-    margin-right: 15px
-`
-
-export const SearchWrapper = styled.div`
-    a {
-        color: #ffffff;
-        text-decoration: none;
-    }
-`

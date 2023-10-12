@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { HeaderWrapper, LogoWrapper } from './index.styles';
-import IressLink from '../IressLink/IressLink'
-import IressInput from '../IressInput/IressInput';
+import { HeaderWrapper, LogoWrapper } from './Header.styles';
+import IressLink from '../iressLink/IressLink'
+import IressInput from '../iressInput/IressInput';
 
 const Header = () => {
     const [value, setValue] = useState('')

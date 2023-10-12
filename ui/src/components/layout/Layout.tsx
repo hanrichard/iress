@@ -1,9 +1,9 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
-import Footer from '../footer';
-import Header from '../header';
-import { LayoutWrapper } from './index.styles'
+import Footer from '../footer/Footer';
+import Header from '../header/Header';
+import { LayoutWrapper } from './Layout.styles'
 
 const Layout = () => {
     return <LayoutWrapper>

@@ -3,7 +3,6 @@ import { getMovies } from '../apis/getMovies';
 import { useParams } from 'react-router-dom';
 import Card, { CardProps } from '../components/card/Card';
 
-
 const Details = () => {
     const { id } = useParams();
     const { data } = getMovies();
