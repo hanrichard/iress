@@ -4,7 +4,7 @@ import { HeaderWrapper, LogoWrapper } from './Header.styles';
 import IressLink from '../iressLink/IressLink';
 import IressInput from '../iressInput/IressInput';
 
-const Header = () => {
+export const Header = () => {
     const [value, setValue] = useState('');
     return (
         <HeaderWrapper>

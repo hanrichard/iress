@@ -1,7 +1,7 @@
 import React from 'react';
 import { IressInputWrapper } from './IressInput.styles';
 
-const IressInput = ({
+export const IressInput = ({
     value,
     placeholder,
     onChange

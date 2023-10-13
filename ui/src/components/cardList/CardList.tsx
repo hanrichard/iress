@@ -8,7 +8,7 @@ export interface CardListProps {
     data: CardProps[];
 }
 
-const CardList = ({ data, withLink }: CardListProps) => {
+export const CardList = ({ data, withLink }: CardListProps) => {
     return data && <CardListWrapper>
         {data.map(i => <Card key={i.id} id={i.id} thumbnail={i.thumbnail} rating={i.rating} name={i.name} withLink={withLink} />)}
     </CardListWrapper>

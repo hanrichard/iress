@@ -1,8 +1,7 @@
 ; import React from 'react';
 import { getMovies } from '../apis/getMovies';
 import { useSearchParams } from 'react-router-dom';
-import CardList from '../components/cardList/CardList';
-import { CardProps } from '../components/card/Card';
+import { CardList, CardProps } from '../components';
 
 const SearchResult = () => {
     const { data } = getMovies();

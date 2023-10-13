@@ -10,7 +10,7 @@ export interface CardProps {
     rating: number;
 }
 
-const Card = ({ id, name, thumbnail, rating, withLink }: CardProps) => {
+export const Card = ({ id, name, thumbnail, rating, withLink }: CardProps) => {
     return (
         <CardWrapper key={id}>
             {withLink ? (

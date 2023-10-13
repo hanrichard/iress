@@ -1,6 +1,6 @@
 import React from 'react';
 import { getMovies } from '../apis/getMovies';
-import CardList from '../components/cardList/CardList';
+import { CardList } from '../components';
 
 const Home = () => {
     const { data } = getMovies()

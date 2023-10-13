@@ -1,7 +1,7 @@
 import React from 'react';
 import { getMovies } from '../apis/getMovies';
 import { useParams } from 'react-router-dom';
-import Card, { CardProps } from '../components/card/Card';
+import { Card, CardProps } from '../components';
 
 const Details = () => {
     const { id } = useParams();
