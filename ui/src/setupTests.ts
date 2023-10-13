@@ -8,7 +8,10 @@ import { configure as configureRtl } from '@testing-library/react';
 import 'jest-styled-components';
 import { setLogger } from 'react-query';
 import Schema from 'async-validator';
+import { setupServer } from 'msw/node';
+import { handlers } from './mocks';
 
+export const mswServer = setupServer(...handlers)
 
 configureRtl({ defaultHidden: true });
 
@@ -16,7 +19,10 @@ configureRtl({ defaultHidden: true });
 (Schema as any).warning = () => void {};
 
 // eslint-disable-next-line
-beforeAll(() => {});
+beforeAll(() =>  mswServer.listen());
+
+afterEach(() => mswServer.resetHandlers);
+afterAll(() => mswServer.close);
 
 setLogger({
   log: () => void {},

@@ -4,7 +4,7 @@ import CardList from '../components/cardList/CardList';
 
 const Home = () => {
     const { data } = getMovies()
-    const displayMovies = () => <CardList data={data?.movies?.populars} withLink />
+    const displayMovies = () => data ? <CardList data={data?.movies?.populars} withLink /> : <>No result</>
     return displayMovies()
 };
 
