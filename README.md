@@ -29,9 +29,9 @@
 - go to http://localhost:5020/ or http://iresstest.s3-website-ap-southeast-2.amazonaws.com/
 - enter the keywords in input field
 - hit search
-- key word - in - with multi results
-- key word - Joker (2019) - with one results
-- key word - test - with no results
+  - key word - in - with multi results
+  - key word - Joker (2019) - with one result
+  - key word - test - with no results
 
 ## Server - to serve node express api
 
