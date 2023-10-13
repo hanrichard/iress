@@ -21,7 +21,7 @@ const Card = ({ id, name, thumbnail, rating, withLink }: CardProps) => {
                     <img src={thumbnail} />
                 )}
             <NameWrapper>{withLink ? <Link to={'/movie/' + id}>{name}</Link> : name}</NameWrapper>
-            <div>{rating}</div>
+            <div>Rating: {rating}</div>
         </CardWrapper>
     );
 };

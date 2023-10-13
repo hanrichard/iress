@@ -15,7 +15,7 @@ test('renders Detail page', async () => {
   }
  });
 
- expect(await screen.findByText('9')).toBeInTheDocument();
+ expect(await screen.findByText('Rating: 9')).toBeInTheDocument();
 });
 
 test('renders Detail page with no result', async () => {

@@ -14,7 +14,7 @@ test('renders SearchResults page', async () => {
    route: '/searchResult?key=The'
   }
  });
- expect(await screen.findByText('9')).toBeInTheDocument();
+ expect(await screen.findByText('Rating: 9')).toBeInTheDocument();
  expect(await screen.findByRole('link', { name: 'The Dark Knight (2008)' })).toBeInTheDocument();
 });
 
