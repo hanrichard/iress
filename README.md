@@ -31,7 +31,7 @@
 - go to server folder
 - run yarn install
 - run yarn dev
-- go to http://localhost:8080/ in the broswer
+- go to http://localhost:8080/api/movies in the broswer
 
 ## Note:
 
