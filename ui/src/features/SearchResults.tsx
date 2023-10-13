@@ -10,7 +10,7 @@ const SearchResult = () => {
     const key = searchParams.get('key');
 
     const items = data?.movies?.populars?.filter((i: CardProps) => {
-        return i?.name?.toLocaleLowerCase().includes(key?.replace("-", ' ')?.toLocaleLowerCase() || '');
+        return i?.name?.toLocaleLowerCase().includes(key?.toLocaleLowerCase() || '');
     }) ?? [];
 
     const displayMovies = () => <CardList data={items} withLink />;
