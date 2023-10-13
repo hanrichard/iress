@@ -24,6 +24,15 @@
 - run yarn install
 - run yarn build
 
+### How to search the movies:
+
+- go to http://localhost:5020/ or http://iresstest.s3-website-ap-southeast-2.amazonaws.com/
+- enter the keywords in input field
+- hit search
+- key word - in - with multi results
+- key word - Joker (2019) - with one results
+- key word - test - with no results
+
 ## Server - to serve node express api
 
 ### How to run the server:
