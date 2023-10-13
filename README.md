@@ -48,6 +48,8 @@
 
 - running environment - node v18.18.0
 
+- Log API call durations will be shown in the aws cloudwatch
+
 ## Todo:
 
 - to move all components into npm
