@@ -33,13 +33,13 @@
 - run yarn dev
 - go to http://localhost:8080/ in the broswer
 
-### Note:
+## Note:
 
 - the server has been deployed to aws, if you want to test locally, simply replace the aws url with localhost url
 
 - running environment - node v18.18.0
 
-### Todo:
+## Todo:
 
 - to move all components into npm
 - to add more unit test to each component
