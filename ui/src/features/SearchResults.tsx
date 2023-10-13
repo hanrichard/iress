@@ -1,7 +1,7 @@
 ; import React from 'react';
 import { getMovies } from '../apis/getMovies';
 import { useSearchParams } from 'react-router-dom';
-import { CardList, CardProps } from '../components';
+import { CardList, CardProps, IressText, IressHeading } from '../components';
 
 const SearchResult = () => {
     const { data, isLoading } = getMovies();
@@ -16,9 +16,9 @@ const SearchResult = () => {
     const displayMovies = () => <CardList data={items} withLink />;
 
     return <>
-
+        <IressHeading level="1">Search results</IressHeading>
         <div>{isLoading && 'Loading...'}</div>
-        { !isLoading && (items.length !== 0 ? displayMovies() : <>No result</>)}</>;
+        { !isLoading && (items.length !== 0 ? displayMovies() : <IressText type="text">No result</IressText>)}</>;
 };
 
 export default SearchResult;

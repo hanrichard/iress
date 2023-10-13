@@ -52,6 +52,7 @@
 
 - to move all components into npm
 - to add more unit test to each component
+- to refactor typograhpy
 - to deploy it to s3 hosting env
 - to create search api
 - to create movie details api

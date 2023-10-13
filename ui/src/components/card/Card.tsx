@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CardWrapper, NameWrapper } from './Card.styles';
+import { IressText } from '../iressText/IressText';
 
 export interface CardProps {
     id: string;
@@ -21,7 +22,7 @@ export const Card = ({ id, name, thumbnail, rating, withLink }: CardProps) => {
                     <img src={thumbnail} />
                 )}
             <NameWrapper>{withLink ? <Link to={'/movie/' + id}>{name}</Link> : name}</NameWrapper>
-            <div>Rating: {rating}</div>
+            <IressText type="text">Rating: {rating}</IressText>
         </CardWrapper>
     );
 };
