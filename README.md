@@ -52,6 +52,7 @@
 
 ## Todo:
 
+- to make the site to be fully responsive
 - to move all components into npm
 - to add more unit test to each component
 - to refactor typograhpy
